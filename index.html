@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <meta charset=”UTF-8″ />
+    <title>Vende tu alma al diablo 38)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<h1>Registro para pedir un prestamo y calculadora de tu prestamo deseado!</h1>
+<body>
+    <div class="Datos de usuario"></div>
+    <form id="formuser">
+        <label for="nombre">Nombre del Cliente: </label>
+        <input id="nombre" type="text" />
+        <br /><br />
+  
+        <label for="apellido">Apellido del Cliente</label>
+        <input id="apellido" type="text" />
+        <br /><br />
+  
+        <label for="Identificacion">Identificacion</label>
+        <input id="identificacion" type="number" />
+        <br /><br />
+
+        <label for="numtelf">Numero Telefónico</label>
+        <input id="numtelf" type="number" />
+        <br /><br />
+
+        <label for="dinero">cuanto dinero necesitas?</label>
+        <input id="dinero" type="number" />
+        <br /><br />
+
+        <label for="numcuotas">a cuantas cuotas deseas pagar?</label>
+        <input id="numcuotas" type="number" />
+        <br /><br />
+
+        <label for="tipoprestamo">Tipo de prestamo </label>
+        <select name="tipoprestamo" id="tipoprestamo">
+          <option value="libreinversion">Libre Inversion</option>
+          <option value="Casa">Casa</option>
+          <option value="Carro">Carro</option>
+        </select>
+
+        <button id="bdatos">Guardar datos</button>
+      </form>
+      
+      <h2>Calcula Tu prestamo aquí!</h2>
+      <p>Solo tienes que darle click al boton "CALCULA" cuando tengas ya puesto la cantidad de dinero que necesites, y las cuotas a las que piensas pagar, recuerda que nuestras tazas de interes pueden variar.
+      </p>
+
+            <button id="b1" onclick="gen_table();">CALCULA</button>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <td>Cuota </td>
+                        <td>Dinero que abonas</td>
+                        <td>Interes que pagas</td>
+                        <td>Total a pagar de la cuota</td>
+                    </tr>
+                </thead>
+                <tbody id="tcuerpo">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="ft">TOTAL</td>
+                        <td id="t1"></td>
+                        <td id="t2"></td>
+                        <td id="t3"></td>
+                    </tr>
+                </tfoot>
+            </table>
+    </div>
+    <button class="b2" onclick="pedir_prestamo();">Pedir Prestamo</button>
+    <button class="b3" onclick="pago_cuota();">Paga una cuota</button>
+    <script src="./scripts/prestamo.js"></script>
+
+    <h2>Que vas a comprar con esto?</h2>
+    <button id="b99" onclick="createarray1();">Iniciar Lista de compras</button>
+
+
+    <h2>Usuarios Registrados:</h2>
+    <button class="b9" onclick="mostrarUsuarios();">Mostrar Usuarios Reg</button>
+      <br /><br />
+      <div id="contenedorUsuarios"></div>
+    </div>
+</body>
+.
+</html>
